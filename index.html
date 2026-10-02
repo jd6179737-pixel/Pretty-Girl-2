@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vela Atelier - moda femenina elegante y premium para cada ocasión." />
+    <title>Vela Atelier | Moda premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand" aria-label="Vela Atelier logo">
+          <span class="brand-mark"><span>V</span><img alt="" hidden /></span>
+          <span class="brand-name">VELA</span>
+        </div>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#novedades">Novedades</a>
+          <a href="#shop">Colección</a>
+          <a href="#editorial">Editorial</a>
+          <a href="#reviews">Opiniones</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="search-button" type="button" aria-label="Buscar" title="Buscar productos"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="icon-btn orders-button" id="orders-button" type="button" aria-label="Mis pedidos" title="Mis pedidos" hidden><i class="fa-solid fa-receipt"></i></button>
+          <div class="mode-switch" role="group" aria-label="Modo de acceso">
+            <button class="mode-option active" id="user-mode" type="button" aria-pressed="true"><i class="fa-solid fa-store"></i> Usuario</button>
+            <button class="mode-option" id="owner-access" type="button" aria-pressed="false"><i class="fa-solid fa-user-lock"></i> Dueña</button>
+          </div>
+          <button class="logout-button" id="logout-button" type="button" hidden><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</button>
+
+          <div class="cart-box">
+            <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Carrito">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Carrito</span>
+              <strong id="cart-count">(0)</strong>
+            </button>
+            <div class="cart-panel">
+              <ul id="cart-list">
+                <li>Tu carrito está vacío</li>
+              </ul>
+              <p class="shipping-threshold" id="shipping-threshold" aria-live="polite">Agrega 4 productos para solicitar envío.</p>
+              <button class="btn btn-primary checkout-button" id="checkout-button" type="button" disabled>Solicitar envío</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-bar" id="search-bar" hidden>
+      <form class="container search-form" id="search-form">
+        <label class="visually-hidden" for="product-search">Buscar productos</label>
+        <input id="product-search" type="search" placeholder="Buscar productos..." autocomplete="off" />
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-eyebrow">Colección otoño invierno</p>
+            <h1 id="hero-title">Moda esencial para cada momento.</h1>
+            <p class="hero-text" id="hero-text">
+              Prendas pensadas para lucir elegante, sentirse cómoda y destacar con un estilo sobrio y premium.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="btn btn-primary">Comprar ahora</a>
+              <a href="#novedades" class="btn btn-secondary">Ver novedades</a>
+            </div>
+
+            <div class="hero-metrics">
+              <div>
+                <strong>24k+</strong>
+                <span>clientes</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>valoración</span>
+              </div>
+              <div>
+                <strong>48h</strong>
+                <span>envío</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Modelo con ropa elegante">
+            <div class="floating-card floating-card-top">
+              <span>New in</span>
+              <strong>Premium Layer</strong>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span>Hasta</span>
+              <strong>-40% OFF</strong>
+            </div>
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Modelo con outfit elegante" />
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container" id="novedades">
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Ropa para mujeres" />
+          <div class="category-content">
+            <span>Women</span>
+            <h2>Feminine Edit</h2>
+            <a href="#shop" class="text-link">Ver colección</a>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Conjuntos femeninos" />
+          <div class="category-content">
+            <span>Sets</span>
+            <h2>Minimal looks</h2>
+            <a href="#shop" class="text-link">Ver colección</a>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80" alt="Vestidos femeninos" />
+          <div class="category-content">
+            <span>Dresses</span>
+            <h2>Statement dresses</h2>
+            <a href="#shop" class="text-link">Ver colección</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="feature-strip container">
+        <article class="feature-item" data-benefit="shipping">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <h3>Envío gratis</h3>
+            <p>Desde $120</p>
+          </div>
+        </article>
+        <article class="feature-item" data-benefit="warranty">
+          <i class="fa-solid fa-shield-heart"></i>
+          <div>
+            <h3>Garantía</h3>
+            <p>30 días</p>
+          </div>
+        </article>
+        <article class="feature-item" data-benefit="gifts">
+          <i class="fa-solid fa-gift"></i>
+          <div>
+            <h3>Regalos</h3>
+            <p>Con cada compra</p>
+          </div>
+        </article>
+        <article class="feature-item" data-benefit="support">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <h3>Soporte</h3>
+            <p>Atención 24/7</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="products container" id="shop">
+        <div class="section-head">
+          <p class="eyebrow">Best sellers</p>
+          <h2>Lo más buscado</h2>
+        </div>
+
+        <div class="filter-bar" aria-label="Filtro de productos">
+          <button class="filter-option active" type="button" data-filter="all">Todo</button>
+          <button class="filter-option" type="button" data-filter="dresses">Vestidos</button>
+          <button class="filter-option" type="button" data-filter="sets">Conjuntos</button>
+          <button class="filter-option" type="button" data-filter="outerwear">Abrigos</button>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-product-id="chaqueta-lino" data-category="outerwear">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Chaqueta de lino" />
+              <span class="badge">Nuevo</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Abrigos</span>
+                <span class="price">$89</span>
+              </div>
+              <h3>Chaqueta de lino</h3>
+              <p>Textura ligera, corte relajado y diseño premium.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Chaqueta de lino">Añadir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-id="abrigo-oversized" data-category="outerwear">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80" alt="Abrigo femenino oversized" />
+              <span class="badge badge-sale">-20%</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Abrigos</span>
+                <span class="price">$110</span>
+              </div>
+              <h3>Abrigo oversized</h3>
+              <p>Silhouette moderna con cortes impecables.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Abrigo oversized">Añadir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-id="conjunto-sastre" data-category="sets">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80" alt="Conjunto femenino" />
+              <span class="badge">Top</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Conjuntos</span>
+                <span class="price">$68</span>
+              </div>
+              <h3>Conjunto sastre</h3>
+              <p>Dos piezas elegantes para elevar tu estilo diario.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Conjunto sastre">Añadir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-id="vestido-midi" data-category="dresses">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Vestido midi" />
+              <span class="badge badge-sale">-15%</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Vestidos</span>
+                <span class="price">$94</span>
+              </div>
+              <h3>Vestido midi</h3>
+              <p>Elegancia sobria con un corte muy favorecedor.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Vestido midi">Añadir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-id="blusa-satinada" data-category="sets">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80" alt="Blusa femenina premium" />
+              <span class="badge">Popular</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Conjuntos</span>
+                <span class="price">$72</span>
+              </div>
+              <h3>Blusa satinada</h3>
+              <p>Textura suave y caída elegante para usar a diario.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Blusa satinada">Añadir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-id="vestido-negro" data-category="dresses">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80" alt="Vestido negro elegante" />
+              <span class="badge">Edition</span>
+              <div class="product-actions">
+                <button type="button" aria-label="Ver producto"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-topline">
+                <span class="tag">Vestidos</span>
+                <span class="price">$44</span>
+              </div>
+              <h3>Vestido negro</h3>
+              <p>Una pieza clásica para ocasiones especiales.</p>
+              <div class="product-bottom">
+                <span class="stars">★★★★★</span>
+                <button class="add-cart-btn" type="button" data-product="Vestido negro">Añadir</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="editorial" id="editorial">
+        <div class="container editorial-grid">
+          <div class="editorial-copy">
+            <p class="eyebrow">Nuestra visión</p>
+            <h2>Elegancia cotidiana con un toque premium.</h2>
+            <p>
+              Diseñamos piezas que combinan calidad, comodidad y simplicidad, para que cada look se sienta natural y sofisticado.
+            </p>
+            <a href="#shop" class="btn btn-primary">Descubrir colección</a>
+          </div>
+
+          <div class="editorial-gallery">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Colección femenina" class="gallery-main" />
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Colección femenina de temporada" class="gallery-side" />
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials container" id="reviews">
+        <div class="section-head">
+          <p class="eyebrow">Opiniones</p>
+          <h2>Clientes que repiten</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“La calidad supera lo esperado. Cada prenda se siente premium y muy bien hecha.”</p>
+            <strong>María S.</strong>
+          </article>
+
+          <article class="testimonial-card highlight">
+            <div class="stars">★★★★★</div>
+            <p>“Me encanta la estética minimalista y elegante. Todo se ve impecable y muy moderno.”</p>
+            <strong>Camila R.</strong>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Las compras son rápidas, el estilo muy limpio y la atención excelente.”</p>
+            <strong>Lucía T.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="newsletter container">
+        <div class="newsletter-card">
+          <div>
+            <p class="eyebrow">Newsletter</p>
+            <h2>Recibe ofertas exclusivas.</h2>
+          </div>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required />
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <section class="auth-gate" id="auth-gate" aria-labelledby="auth-title">
+      <div class="auth-panel">
+        <div class="auth-brand">
+          <span class="brand-mark"><span>V</span><img alt="" hidden /></span>
+          <span class="brand-name">VELA</span>
+        </div>
+        <p class="eyebrow">Acceso a la tienda</p>
+        <h1 id="auth-title">Bienvenida</h1>
+        <div class="auth-tabs" role="group" aria-label="Tipo de acceso">
+          <button class="auth-tab active" id="show-login" type="button" aria-pressed="true">Iniciar sesión</button>
+          <button class="auth-tab" id="show-register" type="button" aria-pressed="false">Crear cuenta</button>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <label>Nombre de usuario<input name="username" type="text" autocomplete="username" minlength="3" required /></label>
+          <label>Contraseña<input name="password" type="password" autocomplete="current-password" required /></label>
+          <p class="auth-error" id="login-error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Entrar a la tienda</button>
+        </form>
+
+        <form id="register-form" class="auth-form" hidden>
+          <label>Nombre de usuario<input name="username" type="text" autocomplete="username" minlength="3" required /></label>
+          <label>Contraseña<input name="password" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <label>Repetir contraseña<input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <p class="auth-error" id="register-error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Crear cuenta</button>
+        </form>
+
+        <button class="auth-owner-access" id="auth-owner-access" type="button"><i class="fa-solid fa-user-lock"></i> Entrar como dueña</button>
+      </div>
+    </section>
+
+    <div class="product-lightbox" id="product-lightbox" aria-hidden="true" hidden>
+      <section class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar imagen"><i class="fa-solid fa-xmark"></i></button>
+        <div class="lightbox-image-wrap">
+          <button class="lightbox-nav lightbox-previous" id="lightbox-previous" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <img id="lightbox-image" alt="" />
+          <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+          <span id="lightbox-counter" class="lightbox-counter" aria-live="polite"></span>
+        </div>
+        <aside class="lightbox-details">
+          <p class="eyebrow">Detalle del producto</p>
+          <h2 id="lightbox-title"></h2>
+          <strong class="lightbox-price" id="lightbox-price"></strong>
+          <p class="lightbox-description" id="lightbox-description"></p>
+          <p class="lightbox-stock" id="lightbox-stock" aria-live="polite"></p>
+          <label class="lightbox-size-field">Talla<select id="lightbox-size" required></select></label>
+          <button class="btn btn-primary lightbox-add-button" id="lightbox-add" type="button">Añadir al carrito</button>
+        </aside>
+      </section>
+    </div>
+
+    <div class="shipping-modal" id="shipping-modal" aria-hidden="true" hidden>
+      <section class="shipping-panel" role="dialog" aria-modal="true" aria-labelledby="shipping-title">
+        <div class="admin-heading">
+          <div>
+            <p class="eyebrow">Pedido</p>
+            <h2 id="shipping-title">Datos de entrega</h2>
+          </div>
+          <button class="close-btn" id="close-shipping" type="button" aria-label="Cerrar formulario">&times;</button>
+        </div>
+        <form id="shipping-form" class="shipping-form">
+          <label>Nombre de quien recibe<input name="recipient" type="text" autocomplete="name" required /></label>
+          <label>Teléfono<input name="phone" type="tel" autocomplete="tel" required /></label>
+          <label>Ubicación / dirección completa<textarea name="location" rows="3" autocomplete="street-address" required></textarea></label>
+          <fieldset class="payment-methods">
+            <legend>Forma de pago</legend>
+            <label><input type="radio" name="paymentMethod" value="transferencia" required /> Transferencia</label>
+            <label><input type="radio" name="paymentMethod" value="efectivo" required /> Efectivo</label>
+          </fieldset>
+          <p class="shipping-order-count" id="shipping-order-count"></p>
+          <button class="btn btn-primary" type="submit">Confirmar solicitud</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="order-code-modal" id="order-code-modal" aria-hidden="true" hidden>
+      <section class="order-code-panel" role="dialog" aria-modal="true" aria-labelledby="order-code-title">
+        <p class="eyebrow">Pedido confirmado</p>
+        <h2 id="order-code-title">Tu código de entrega</h2>
+        <p>Muéstralo al recibir tu pedido. La dueña lo verificará para confirmar la entrega.</p>
+        <strong class="delivery-code" id="delivery-code"></strong>
+        <button class="btn btn-primary" id="close-order-code" type="button">Entendido</button>
+      </section>
+    </div>
+
+    <div class="order-history-modal" id="order-history-modal" aria-hidden="true" hidden>
+      <section class="order-history-panel" role="dialog" aria-modal="true" aria-labelledby="order-history-title">
+        <div class="admin-heading">
+          <div>
+            <p class="eyebrow">Tu cuenta</p>
+            <h2 id="order-history-title">Mis pedidos</h2>
+          </div>
+          <button class="close-btn" id="close-order-history" type="button" aria-label="Cerrar mis pedidos">&times;</button>
+        </div>
+        <div class="order-history-list" id="order-history-list"></div>
+      </section>
+    </div>
+
+    <div class="preview-auth-modal" id="preview-auth-modal" aria-hidden="true" hidden>
+      <section class="auth-panel preview-auth-panel" role="dialog" aria-modal="true" aria-labelledby="preview-auth-title">
+        <p class="eyebrow">Vista de usuario</p>
+        <h2 id="preview-auth-title">Confirma tu contraseña</h2>
+        <p class="preview-auth-copy">Ingresa la contraseña de dueña para abrir la vista previa.</p>
+        <form id="preview-auth-form" class="auth-form">
+          <label>Contraseña<input name="password" type="password" autocomplete="current-password" required /></label>
+          <p class="auth-error" id="preview-auth-error" role="alert"></p>
+          <div class="preview-auth-actions">
+            <button class="btn btn-primary" type="submit">Ver vista previa</button>
+            <button class="btn btn-secondary" id="cancel-preview" type="button">Cancelar</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="admin-modal" id="admin-modal" aria-hidden="true">
+      <div class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+        <div class="admin-heading">
+          <div>
+            <p class="eyebrow">Panel de administración</p>
+            <h2 id="admin-title">Administrar tienda</h2>
+          </div>
+          <div class="admin-heading-actions">
+            <button class="btn btn-secondary admin-preview-button" id="preview-store" type="button"><i class="fa-solid fa-eye"></i> Vista de usuario</button>
+            <button class="close-btn" id="close-admin" type="button" aria-label="Cerrar panel">&times;</button>
+          </div>
+        </div>
+
+        <form class="admin-access" id="admin-access-form">
+          <label for="owner-pin">PIN del dueño</label>
+          <input id="owner-pin" type="password" inputmode="numeric" autocomplete="current-password" required />
+          <p id="admin-access-error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Entrar</button>
+        </form>
+
+        <form id="admin-form">
+          <section class="admin-section">
+            <h3>Identidad de la tienda</h3>
+            <div class="admin-fields">
+              <label>Nombre de la tienda<input name="storeName" type="text" required /></label>
+              <label class="field-full">Subir logo<input name="storeLogoFile" type="file" accept="image/*" /><img id="admin-logo-preview" class="admin-logo-preview" alt="Vista previa del logo" hidden /></label>
+            </div>
+          </section>
+
+          <section class="admin-section">
+            <h3>Portada</h3>
+            <div class="admin-fields admin-fields-wide">
+              <label>Etiqueta<input name="heroEyebrow" type="text" /></label>
+              <label>Título<input name="heroTitle" type="text" /></label>
+              <label class="field-full">Descripción<textarea name="heroText" rows="3"></textarea></label>
+            </div>
+          </section>
+
+          <section class="admin-section">
+            <h3>Envíos y servicios</h3>
+            <div class="admin-fields">
+              <label>Envío - título<input name="shippingTitle" type="text" required /></label>
+              <label>Envío - detalle<input name="shippingDetail" type="text" required /></label>
+              <label>Garantía - título<input name="warrantyTitle" type="text" required /></label>
+              <label>Garantía - detalle<input name="warrantyDetail" type="text" required /></label>
+              <label>Regalos - título<input name="giftsTitle" type="text" required /></label>
+              <label>Regalos - detalle<input name="giftsDetail" type="text" required /></label>
+              <label>Soporte - título<input name="supportTitle" type="text" required /></label>
+              <label>Soporte - detalle<input name="supportDetail" type="text" required /></label>
+            </div>
+          </section>
+
+          <section class="admin-section">
+            <h3>Productos</h3>
+            <div id="admin-products" class="admin-products"></div>
+            <button class="admin-add-product" id="add-product" type="button"><i class="fa-solid fa-plus"></i> Añadir producto</button>
+          </section>
+
+          <section class="admin-section">
+            <h3>Pedidos recibidos</h3>
+            <div id="admin-orders" class="admin-orders"></div>
+          </section>
+
+          <div class="admin-actions">
+            <button class="btn btn-secondary" id="reset-store" type="button">Restaurar original</button>
+            <button class="btn btn-primary" type="submit">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="brand footer-brand" aria-label="Vela Atelier logo">
+          <span class="brand-mark"><span>V</span><img alt="" hidden /></span>
+          <span class="brand-name">VELA</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#shop">Colección</a>
+          <a href="#editorial">Editorial</a>
+          <a href="#reviews">Reseñas</a>
+        </div>
+
+        <p>© 2026 Vela Atelier</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
